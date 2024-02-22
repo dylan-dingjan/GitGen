@@ -1,4 +1,4 @@
-```markdown
+
 # GitGen
 
 GitGen is a simple yet useful piece of code designed to make your university life a tiny bit easier by automating the organization, creation, and initialization of programming assignments.
@@ -21,13 +21,13 @@ To run GitGen, follow these simple steps:
 1. Open your terminal.
 2. Navigate to the directory containing the GitGen file.
 3. Use the following command to run GitGen on macOS:
-   ```
+
    python3 GitGen-mac.py
-   ```
+
    or on Linux:
-   ```
+
    python3 GitGen-linux.py
-   ```
+
 
 4. Follow the on-screen prompts to organize, create, and access your programming assignments effortlessly.
 
