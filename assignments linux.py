@@ -1,16 +1,18 @@
 import os
 import subprocess
 
+base_location = "Desktop"
+
 def create_new_course():
     course_name = input("Enter course name: ")
     course_folder = f"(){course_name}"
-    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+    desktop_path = os.path.join(os.path.expanduser("~"), base_location)
     course_path = os.path.join(desktop_path, course_folder)
     os.makedirs(course_path)
     print(f"Course '{course_name}' created successfully.")
 
 def create_new_assignment():
-    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+    desktop_path = os.path.join(os.path.expanduser("~"), base_location)
     courses = [folder for folder in os.listdir(desktop_path) if os.path.isdir(os.path.join(desktop_path, folder)) and folder.startswith("()")]
     if not courses:
         print("No courses found. Please create a course first.")
@@ -40,7 +42,7 @@ def create_new_assignment():
     print(f"Assignment '{assignment_name}' created successfully.")
 
 def open_assignment():
-    desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
+    desktop_path = os.path.join(os.path.expanduser("~"), base_location)
     courses = [folder for folder in os.listdir(desktop_path) if os.path.isdir(os.path.join(desktop_path, folder)) and folder.startswith("(")]
     if not courses:
         print("No courses found. Please create a course first.")
@@ -72,15 +74,15 @@ def open_assignment():
     
     assignment_path = os.path.join(course_path, selected_assignment)
     
-    # Construct the AppleScript command to open a new Terminal window and navigate to the assignment folder
-    applescript_command = f'''
-        tell application "Terminal"
-            do script "cd '{assignment_path}'"
-        end tell
-    '''
-    
-    # Execute the AppleScript command
-    subprocess.run(['osascript', '-e', applescript_command])
+   # Construct the command to open a new Terminal window and navigate to the assignment folder
+    if os.name == 'posix':  # Unix-like system
+        terminal_command = f"gnome-terminal --working-directory='{assignment_path}'"
+    else:
+        print("Opening a new terminal window is not supported on this platform.")
+        return
+
+    # Execute the command
+    subprocess.run(terminal_command, shell=True)
 
     print(f"Opened assignment '{selected_assignment}' in a new Terminal window.")
 
