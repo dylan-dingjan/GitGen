@@ -22,11 +22,11 @@ To run GitGen, follow these simple steps:
 2. Navigate to the directory containing the GitGen file.
 3. Use the following command to run GitGen on macOS:
 
-   python3 GitGen-mac.py
+   `python3 GitGen-mac.py`
 
    or on Linux:
 
-   python3 GitGen-linux.py
+   `python3 GitGen-linux.py`
 
 
 4. Follow the on-screen prompts to organize, create, and access your programming assignments effortlessly.
