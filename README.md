@@ -35,13 +35,13 @@ To run GitGen, follow these simple steps:
 
 Suppose your base location for all courses and assignments is `/Users/username/Documents/University`. Running GitGen will create course folders with the prefix `()` within this directory. For instance:
 
-- `(/CSE101)` for the Computer Science course.
-- `(/MATH201)` for the Mathematics course.
+- `/()CSE101` for the Computer Science course.
+- `/()MATH201` for the Mathematics course.
 
 Within each course folder, GitGen will create assignments. For instance:
 
-- `(/CSE101/Assignment1)`
-- `(/CSE101/Assignment2)`
+- `/()CSE101/Assignment1`
+- `/()CSE101/Assignment2`
 
 ## Note
 
