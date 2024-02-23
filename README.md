@@ -14,6 +14,18 @@ GitGen comes with two files: `GitGen-linux.py` and `GitGen-mac.py`, tailored for
 - **Initialization**: When creating a new assignment, GitGen always initializes an empty git repository. You'll be prompted to add a remote git, but this step is optional.
 - **Quick Access**: GitGen enables faster access to assignments by opening a second terminal with the chosen assignment as the location.
 
+## Install GitGen
+
+Create a new folder in which you will retrieve the git repository, then follow these steps:
+1. Open the terminal in the folder you just created.
+2. Start a git using: `git init`
+3. Add the remote git using: `git remote add origin git@github.com:dylan-dingjan/GitGen.git`
+4. Rename your current branch using: `git branch -m master main`
+5. Pull the repository using: `git pull origin main`
+6. Now you have all needed files!
+
+To make it easier to start the script, you can put the python script in the folder at which the terminal starts. Don't forget to change the base_location to specify where the courses will be created
+
 ## Usage
 
 To run GitGen, follow these simple steps:
