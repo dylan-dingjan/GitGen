@@ -18,10 +18,8 @@ GitGen comes with two files: `GitGen-linux.py` and `GitGen-mac.py`, tailored for
 
 Create a new folder in which you will retrieve the git repository, then follow these steps:
 1. Open the terminal in the folder you just created.
-2. Start a git using: `git init`
-3. Add the remote git using: `git remote add origin git@github.com:dylan-dingjan/GitGen.git`
-4. Rename your current branch using: `git branch -m master main`
-5. Pull the repository using: `git pull origin main`
+2.1 Enter the following command when using HTTP: `git clone https://github.com/dylan-dingjan/GitGen.git`
+2.2 Enter the following command when using SSH: `git clone git@github.com:dylan-dingjan/GitGen.git` 
 6. Now you have all needed files!
 
 To make it easier to start the script, you can put the python script in the folder at which the terminal starts. Don't forget to change the base_location to specify where the courses will be created
